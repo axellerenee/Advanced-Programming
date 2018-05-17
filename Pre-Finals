@@ -1,1 +1,103 @@
+/*
+* * * * DRAFT  SHIT * * * *
 
+FUNC GETDATA
+	
+	guidelines:
+
+		>	initialize string to all NULLs (or blanks) to prevent garbage data.
+		>	prompts and stuff. You know what to do lol.
+		>	extra cin.gets to clear buffer (carriage return (\n) problem.)
+
+
+FUNC {DISPLAY CHART}
+
+	FOR LOOP
+
+		cout << *dec* << " \t " << *ASCII* << " \t " << *OCC*;
+		(where *DEC*, *ASCII*, and *OCC* are incremented per iteration.)
+		
+		
+		output : 	33	!	0
+					34	"	0
+					35	#	0
+					   ...
+				_______________
+				
+				
+		(WHERE OUTPUT OF VARIABLE *OCC* IS BASED ON NUMBER OF OCCURENCES OF THE
+		CHARACTER.)
+
+		
+FUNC CHARACTER COUNT
+	
+	SWITCH CASE
+		
+		switch *COUNT*
+		
+		case (invis)
+		case (invis)
+			
+			++INVISCOUNT
+			break;
+			
+			... 
+		case (letter)
+		case (letter)
+			...
+		case (number)
+		case (number)
+			...
+		case (symbol)
+		case (symbol)
+			
+			++VISIBLECOUNT
+			break;
+			
+FUNC SEARCH COUNT
+		
+	FOR LOOP
+	
+	declare index, init. to 0.
+	
+	while NULL is not encountered from STRING[INDEX] to STRING[INDEX+sizeof(SAMPLE)]: 
+		if SAMPLE is found, ++SAMPLECOUNT
+		if and if not, ++index after.
+	
+
+*/
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void getdata (char string[],char search[]){
+	
+	cout << "Please input main string: \n\n\t";
+	cin.get(string, 100);
+	cin.get();
+	cout << "\n\nPlease input string for search: \n\n\t";
+	cin.get(search, 100);	cout << "\n\n";
+}
+
+void displayChart (char string[]){
+
+	int dec = 0;
+	int ascii = 0;
+	int occ = 0;
+
+	cout << "___________________\nDEC\tASCII\tOCC\n___________________";
+	
+	for (int index = 0; index != 255; ++index){
+		
+	}
+}
+
+int main (void){
+
+char mainString[100];
+char searchSample[100];
+	getdata(mainString, searchSample);
+
+	displayChart(mainString);
+}
